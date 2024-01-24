@@ -1,0 +1,12 @@
+python -m venv venv
+venv/Scripts/activate
+pip install fastapi uvicorn
+pip freeze > requirements/txt
+docker compose up --build
+docker tag <image id> quangdinh2102/docker_api:v1
+docker login
+docker push
+
+-to build image
+docker build -t quangdinh2102/docker_api:v1 .
+docker run -p 8000:8000 quangdinh2102/docker_api:v1
