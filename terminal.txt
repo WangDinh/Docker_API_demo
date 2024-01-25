@@ -10,3 +10,5 @@ docker push
 -to build image
 docker build -t quangdinh2102/docker_api:v1 .
 docker run -p 8000:8000 quangdinh2102/docker_api:v1
+
+install new lib
